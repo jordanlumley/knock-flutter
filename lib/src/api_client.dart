@@ -100,7 +100,7 @@ class ApiClient extends http.BaseClient {
       final statusCode = status < 300 ? StatusCode.ok : StatusCode.error;
       final body = response.body;
       return ApiResponse(status: status, statusCode: statusCode, body: body);
-    } catch (error) {
+    } on Exception catch (error) {
       developer.log('Failed API request', error: error);
 
       return ApiResponse(

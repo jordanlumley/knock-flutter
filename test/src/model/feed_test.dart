@@ -301,7 +301,7 @@ void main() {
           ContentBlock.markdown(
             name: 'body',
             content:
-                // ignore: lines_longer_than_80_chars
+                // ignore: lines_longer_than_80_chars - test data with template
                 "Hey **{{ recipient.name | split: ' ' | first }}** - {{ actor.name }} added a new comment.",
             rendered:
                 '<p>Hey <strong>Ellie</strong> - John Hammond added a new comment.</p>',

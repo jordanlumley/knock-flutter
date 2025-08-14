@@ -30,7 +30,8 @@ class ApiResponse with _$ApiResponse {
 
   @override
   String toString() {
-    return 'ApiResponse(status: $status, statusCode: $statusCode, body: $body, error: $error)';
+    return 'ApiResponse(status: $status, statusCode: $statusCode, '
+        'body: $body, error: $error)';
   }
 }
 
@@ -41,6 +42,6 @@ class ApiError extends Error {
 
   @override
   String toString() {
-    return 'ApiError: ${response.toString()}';
+    return 'ApiError: $response';
   }
 }
